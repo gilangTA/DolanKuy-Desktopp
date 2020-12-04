@@ -36,25 +36,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CsvHelper">
-      <HintPath>..\velacrow\CsvHelper.dll</HintPath>
+      <HintPath>.\CsvHelper.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts">
-      <HintPath>..\velacrow\LiveCharts.dll</HintPath>
+      <HintPath>.\LiveCharts.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts.Wpf">
-      <HintPath>..\velacrow\LiveCharts.Wpf.dll</HintPath>
+      <HintPath>.\LiveCharts.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\velacrow\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\velacrow\RestSharp.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http.Formatting">
-      <HintPath>..\velacrow\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Downloads\Desktop\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -69,7 +63,7 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="Velacro">
-      <HintPath>..\velacrow\Velacro.dll</HintPath>
+      <HintPath>.\Velacro.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
