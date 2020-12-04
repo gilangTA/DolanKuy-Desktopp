@@ -68,7 +68,7 @@
                 </TabItem>
                 <TabItem Header="Tabel List Wisata">
                     <Grid Background="#FFFFFF">
-                        <ListView x:Name="serviceList" HorizontalAlignment="Stretch" Margin="0,0,-0.4,0" VerticalAlignment="Stretch" SelectionChanged="serviceList_SelectionChanged">
+                        <ListView x:Name="serviceList" HorizontalAlignment="Stretch" Margin="0,0,-0.4,0" VerticalAlignment="Stretch">
                             <ListView.View>
                                 <GridView>
                                     <GridViewColumn DisplayMemberBinding="{Binding id}" Header="ID" Width="40"/>
