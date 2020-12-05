@@ -4,64 +4,59 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DolanKuyDesktopPalingbaru.Kategori"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Kategori">
+      mc:Ignorable="d"
+      Title="Kategori" Width="652.648" Height="387.881">
 
     <Grid Background="#FFE8E8E8">
-        <StackPanel HorizontalAlignment="Left" Height="381" VerticalAlignment="Top" Width="124" Margin="10,59,0,0" Background="White">
-            <Button Content="Kategory Wisata" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Margin="0,0,0.4,0" />
-            <Button Content="List Akomodasi" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Margin="0,0,0.4,0" />
-            <Button Content="List Wisata" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Margin="0,0,0.4,0" />
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="42" Margin="139,10,0,0" VerticalAlignment="Top" Width="651" Background="White">
-            <Grid Margin="0,0,0.2,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition  Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <Button  Grid.Row="0" Grid.Column="0" Content="Log Out" Margin="557,0,-35.4,-0.4" Height="42" BorderBrush="{x:Null}" FontFamily="Montserrat" Background="#FFFD4715" HorizontalAlignment="Left" Width="84" Foreground="White"/>
-                <TextBox  Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text=" Search For Anything" Margin="10,9,0,9.6" HorizontalAlignment="Left" Width="536"/>
-
-            </Grid>
 
 
-        </StackPanel>
-        <Label Content="DolanKuy" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="124" FontFamily="Montserrat" FontWeight="Bold" Foreground="#FFFF6329" FontSize="22" Height="44" />
-        <StackPanel HorizontalAlignment="Left" Height="381" Margin="139,59,0,0" VerticalAlignment="Top" Width="651" Background="White">
-            <TabControl Height="380" Margin="0,0,0.2,0">
-                <TabItem Header="Create List Akomodasi">
-                    <Grid Background="#FFFFFF">
-                        <Label Content="Nama Kategori" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28"/>
-                        <TextBox HorizontalAlignment="Left" Height="28" Margin="148,10,0,0" TextWrapping="Wrap" Text="Input Nama Kategori" VerticalAlignment="Top" Width="488"/>
-                        <Button Content="Kirim" HorizontalAlignment="Left" Margin="148,62,0,0" VerticalAlignment="Top" Width="488" Background="#FFFF5200" Foreground="White"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Tabel List Akomodasi">
-                    <Grid Background="#FFFFFF">
-                        <ListView x:Name="serviceList" HorizontalAlignment="Stretch" Margin="0,0,-0.4,0" VerticalAlignment="Stretch">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn DisplayMemberBinding="{Binding id}" Header="ID" Width="40"/>
-                                    <GridViewColumn DisplayMemberBinding="{Binding name}" Header="Nama Kategori" Width="120"/>
-                                    <GridViewColumn Header="Action" Width="60">
-                                        <GridViewColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <StackPanel Orientation="Horizontal">
-                                                </StackPanel>
-                                            </DataTemplate>
-                                        </GridViewColumn.CellTemplate>
-                                    </GridViewColumn>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </Grid>
-                </TabItem>
-            </TabControl>
-        </StackPanel>
+            <Button  Grid.Row="0" Grid.Column="0" Content="Log Out" Margin="557,0,-35.4,-0.4" Height="42" BorderBrush="{x:Null}" FontFamily="Montserrat" Background="#FFFD4715" HorizontalAlignment="Left" Width="84" Foreground="White"/>
+            <TextBox  Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text=" Search For Anything" Margin="10,9,0,9.6" HorizontalAlignment="Left" Width="536"/>
+
+        
+
+
+
+
+
+
+        <TabControl Margin="0,52,-0.333,-340">
+            <TabItem Header="Create List Akomodasi">
+                <Grid Background="#FFFFFF" Margin="0,0,0,0.667">
+                    <Label Content="Nama Kategori" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28"/>
+                    <TextBox HorizontalAlignment="Left" Height="28" Margin="148,10,0,0" TextWrapping="Wrap" Text="Input Nama Kategori" VerticalAlignment="Top" Width="488"/>
+                    <Button Content="Kirim" HorizontalAlignment="Left" Margin="148,62,0,0" VerticalAlignment="Top" Width="488" Background="#FFFF5200" Foreground="White"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tabel List Akomodasi">
+                <Grid Background="#FFFFFF" Margin="0,0,0,57.333" RenderTransformOrigin="0.505,0.588">
+                    <ListView x:Name="serviceList" HorizontalAlignment="Stretch" Margin="0,0,0,10" VerticalAlignment="Stretch">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding id}" Header="ID" Width="40"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding name}" Header="Nama Kategori" Width="120"/>
+                                <GridViewColumn Header="Action" Width="60">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Page:MyPage>
