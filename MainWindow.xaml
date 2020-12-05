@@ -7,90 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FFE8E8E8">
+        
         <StackPanel HorizontalAlignment="Left" Height="381" VerticalAlignment="Top" Width="124" Margin="10,59,0,0" Background="White">
-            <Button Content="Kategory Wisata" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Margin="0,0,0.4,0" />
-            <Button Content="List Akomodasi" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Margin="0,0,0.4,0" />
-            <Button Content="List Wisata" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Margin="0,0,0.4,0" />
+            <Button Content="Kategory Wisata" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Click="kategori_click" RenderTransformOrigin="0.501,0.5" />
+            <Button Content="List Akomodasi" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Margin="0,0,0.4,0" Click="akomodasi_click" />
+            <Button Content="List Wisata" Height="36" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Montserrat" FontSize="10" Margin="0,0,0.4,0" Click="wisata_click"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="42" Margin="139,10,0,0" VerticalAlignment="Top" Width="651" Background="White">
-            <Grid Margin="0,0,0.2,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition  Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <Button  Grid.Row="0" Grid.Column="0" Content="Log Out" Margin="557,0,-35.4,-0.4" Height="42" BorderBrush="{x:Null}" FontFamily="Montserrat" Background="#FFFD4715" HorizontalAlignment="Left" Width="84" Foreground="White"/>
-                <TextBox  Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text=" Search For Anything" Margin="10,9,0,9.6" HorizontalAlignment="Left" Width="536"/>
-
-            </Grid>
-
-
-        </StackPanel>
+        <Frame Name="mainFrame" NavigationUIVisibility="Hidden" Margin="134,0,0.333,-0.333"/>
         <Label Content="DolanKuy" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="124" FontFamily="Montserrat" FontWeight="Bold" Foreground="#FFFF6329" FontSize="22" Height="44" />
-        <StackPanel HorizontalAlignment="Left" Height="381" Margin="139,59,0,0" VerticalAlignment="Top" Width="651" Background="White">
-            <TabControl Height="380" Margin="0,0,0.2,0">
-                <TabItem Header="Create List Akomodasi">
-                    <Grid Background="#FFFFFF">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="200"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Label  Grid.Row="0" Grid.Column="0" Content="Nama Lokasi Akomodasi" Margin="1,4,471.2,4" FontFamily="Montserrat" Height="28"/>
-                        <TextBox Grid.Row="0" Grid.Column="0" Height="28" TextWrapping="Wrap"  Margin="164,4,10.4,4"/>
-                        <Label Grid.Row="1" Grid.Column="0" Content="Deskripsi" Margin="1,1,471.2,43.8" FontFamily="Montserrat" Height="72"/>
-                        <TextBox Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Margin="164,9,10.4,51" Height="72"/>
-                        <Label Grid.Row="1" Grid.Column="0" Content="Alamat" Margin="1,92,471.2,9.6" FontFamily="Montserrat" Height="28"/>
-                        <TextBox Grid.Row="1" Grid.Column="0" TextWrapping="Wrap"  Margin="164,93,10.4,11" Height="28"/>
-                        <Label Grid.Row="2" Grid.Column="0" Content="Jam Buka" Margin="1,0,471.2,8" FontFamily="Montserrat" Height="28"/>
-                        <TextBox Grid.Row="2" Grid.Column="0" TextWrapping="Wrap"  Margin="164,2,10.4,10.8" Height="28"/>
-                        <Label  Grid.Row="3" Grid.Column="0" Content="Upload Photo/Video" Margin="1,0.2,471.2,132.6" FontFamily="Montserrat" Height="28"/>
-                        <TextBox Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="Choose Photo" Margin="164,0.2,10.4,132.6" Height="28"/>
-                        <Button Grid.Row="3" Grid.Column="0" Content="Kirim" Margin="164,92.2,10.4,45.6" Background="#FFFF6329" BorderBrush="#FFFF6329" FontFamily="Montserrat" Foreground="#FFFAF8F8"/>
-                        <TextBox HorizontalAlignment="Left" Height="28" Margin="164,43.2,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Latitude" VerticalAlignment="Top" Width="131"/>
-                        <TextBox HorizontalAlignment="Left" Height="28" Margin="500,43.2,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Longitude" VerticalAlignment="Top" Width="120"/>
-                        <Label Content="Latitude" HorizontalAlignment="Left" Margin="1,43.2,0,0" Grid.Row="3" VerticalAlignment="Top" Height="28"/>
-                        <Label Content="Longitude" HorizontalAlignment="Left" Margin="389,43.2,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Tabel List Akomodasi">
-                    <Grid Background="#FFFFFF">
-                        <ListView x:Name="serviceList" HorizontalAlignment="Stretch" Margin="0,0,-0.4,0" VerticalAlignment="Stretch">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn DisplayMemberBinding="{Binding id}" Header="ID" Width="40"/>
-                                    <GridViewColumn DisplayMemberBinding="{Binding name}" Header="Nama Lokasi Akomodasi" Width="120"/>
-                                    <GridViewColumn DisplayMemberBinding="{Binding name}" Header="Alamat" Width="60"/>
-                                    <GridViewColumn DisplayMemberBinding="{Binding description}" Header="Deskripsi" Width="80"/>
-                                    <GridViewColumn DisplayMemberBinding="{Binding contact}" Header="Contact" Width="60"/>
-                                    <GridViewColumn DisplayMemberBinding="{Binding contact}" Header="Latitude" Width="60"/>
-                                    <GridViewColumn DisplayMemberBinding="{Binding contact}" Header="Longitude" Width="60"/>
-                                    <GridViewColumn DisplayMemberBinding="{Binding name}" Header="Photo/Video" Width="80"/>
-                                    <GridViewColumn Header="Action" Width="60">
-                                        <GridViewColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <StackPanel Orientation="Horizontal">
-                                                </StackPanel>
-                                            </DataTemplate>
-                                        </GridViewColumn.CellTemplate>
-                                    </GridViewColumn>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </Grid>
-                </TabItem>
-            </TabControl>
-        </StackPanel>
+        
     </Grid>
 </Window>

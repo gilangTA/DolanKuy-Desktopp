@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Velacro.UIElements.Basic;
 
 namespace DolanKuyDesktopPalingbaru
 {
@@ -20,9 +21,32 @@ namespace DolanKuyDesktopPalingbaru
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private MyPage listWisataPage;
+        private MyPage akomodasiPage;
+        private MyPage kategoriPage;
+
         public MainWindow()
         {
+            listWisataPage = new ListWisata.ListWisata();
+            akomodasiPage = new Akomodasi.Akomodasi();
+            kategoriPage = new Kategori.Kategori();
             InitializeComponent();
+        }
+
+        private void wisata_click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(listWisataPage);
+        }
+
+        private void akomodasi_click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(akomodasiPage);
+        }
+
+        private void kategori_click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(kategoriPage);
         }
     }
 }
